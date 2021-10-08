@@ -1,12 +1,18 @@
 :root {
-  /* --unitsWide: 100;
-  --unitsTall: 100; */
-  /* --colorDefaultSquare: black; */
-  --colorBtn1: #ff1493; /* DeepPink */
+  --colorBackground: rgb(151, 147, 147);
+  --colorSquare: white;
+  --colorBackgrSelector: #ededc6f9;
+  --colorBorderBtn: black;
+  --colorBtn5: #ff1493; /* DeepPink */
   --colorBtn2: #ffa500; /* Orange */
-  --colorBtn3: #da70d6; /* Orchid */
-  --colorBtn4: #ffd700; /* Gold */
-  --colorBtn5: #00ffff; /* Cyan */
+  --colorBtn4: #da70d6; /* Orchid */
+  --colorBtn1: #ffd700; /* Gold */
+  --colorBtn3: #00ffff; /* Cyan */
+  --colorBtn6: #dc143c; /* Crimson */
+  --colorBtn7: #0000ff; /* Blue */
+  --colorBtn8: #000000; /* Black */
+  --colorActive: red;
+  --colorShadow: rgba(49, 138, 172, 1);
 }
 
 * {
@@ -14,41 +20,30 @@
   padding: 0;
 }
 
-body {
-  background-color: white;
-}
-
+/* GRID */
 .grid-square {
-  /* GRID TEST */
+  background: var(--colorBackground);
+  border: 1px solid var(--colorBackground);
   display: grid;
+  grid-gap: 1px;
   grid-template-columns: repeat(100, 1fr);
-  grid-template-rows: repeat(100, 1fr);
-  grid-gap: 0;
-  position: fixed;
-  /* FLEX TEST */
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  position: fixed;
-  width: 100%; */
-  /* width: var(--unitsWide) * var(--unitsTall); */
+  grid-template-rows: repeat(auto);
+  inset: 0;
+  position: absolute;
 }
 
 .square {
-  border: 0.05px solid rgba(0, 0, 0, 0.29);
-  flex: 1;
-  /* height: 100%;
-  width: 100%; */
+  background-color: var(--colorSquare);
 }
 
 /* SELECTOR */
-
 .color-selector {
-  background: #ffffe0;
+  background: var(--colorBackgrSelector);
   display: none;
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
+  padding: 5px;
   position: absolute;
   width: auto;
   z-index: 99;
@@ -56,11 +51,11 @@ body {
 
 button {
   align-items: stretch;
-  border: 1px solid black;
-  height: 30px;
+  border: 2px solid var(--colorBorderBtn);
+  height: 40px;
   margin: 3px;
   transition: all 1s ease;
-  width: 30px;
+  width: 40px;
 }
 
 .btn1-color {
@@ -78,13 +73,21 @@ button {
 .btn5-color {
   background-color: var(--colorBtn5);
 }
+.btn6-color {
+  background-color: var(--colorBtn6);
+}
+.btn7-color {
+  background-color: var(--colorBtn7);
+}
+.btn8-color {
+  background-color: var(--colorBtn8);
+}
 
 button:hover {
-  box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
-  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px var(--colorShadow);
   transition: all 0.2s ease;
 }
 
 button:active {
-  border: 5px solid red;
+  border: 5px solid var(--colorActive);
 }
