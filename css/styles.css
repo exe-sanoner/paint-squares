@@ -1,0 +1,90 @@
+:root {
+  /* --unitsWide: 100;
+  --unitsTall: 100; */
+  /* --colorDefaultSquare: black; */
+  --colorBtn1: #ff1493; /* DeepPink */
+  --colorBtn2: #ffa500; /* Orange */
+  --colorBtn3: #da70d6; /* Orchid */
+  --colorBtn4: #ffd700; /* Gold */
+  --colorBtn5: #00ffff; /* Cyan */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+.grid-square {
+  /* GRID TEST */
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+  grid-gap: 0;
+  position: fixed;
+  /* FLEX TEST */
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: fixed;
+  width: 100%; */
+  /* width: var(--unitsWide) * var(--unitsTall); */
+}
+
+.square {
+  border: 0.05px solid rgba(0, 0, 0, 0.29);
+  flex: 1;
+  /* height: 100%;
+  width: 100%; */
+}
+
+/* SELECTOR */
+
+.color-selector {
+  background: #ffffe0;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  position: absolute;
+  width: auto;
+  z-index: 99;
+}
+
+button {
+  align-items: stretch;
+  border: 1px solid black;
+  height: 30px;
+  margin: 3px;
+  transition: all 1s ease;
+  width: 30px;
+}
+
+.btn1-color {
+  background-color: var(--colorBtn1);
+}
+.btn2-color {
+  background-color: var(--colorBtn2);
+}
+.btn3-color {
+  background-color: var(--colorBtn3);
+}
+.btn4-color {
+  background-color: var(--colorBtn4);
+}
+.btn5-color {
+  background-color: var(--colorBtn5);
+}
+
+button:hover {
+  box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+  color: rgba(255, 255, 255, 1) !important;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  border: 5px solid red;
+}
