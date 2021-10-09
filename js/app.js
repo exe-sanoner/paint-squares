@@ -23,68 +23,104 @@ $(document).ready(function () {
   let currentColor = null;
   let IsClickDown = false;
 
+  const colorBtn1 = $(".btn1-color");
+  const colorBtn2 = $(".btn2-color");
+  const colorBtn3 = $(".btn3-color");
+  const colorBtn4 = $(".btn4-color");
+  const colorBtn5 = $(".btn5-color");
+  const colorBtn6 = $(".btn6-color");
+  const colorBtn7 = $(".btn7-color");
+  const colorBtn8 = $(".btn8-color");
+
   // RIGHT-CLICK EVENTS
   $(document).contextmenu(function (e) {
     createColorSelector(e);
 
-    $(".btn1-color").on("click", function () {
+    colorBtn1.on("click", function () {
       currentColor = "btn1-color";
     });
-    $(".btn2-color").on("click", function () {
+    colorBtn2.on("click", function () {
       currentColor = "btn2-color";
     });
-    $(".btn3-color").on("click", function () {
+    colorBtn3.on("click", function () {
       currentColor = "btn3-color";
     });
-    $(".btn4-color").on("click", function () {
+    colorBtn4.on("click", function () {
       currentColor = "btn4-color";
     });
-    $(".btn5-color").on("click", function () {
+    colorBtn5.on("click", function () {
       currentColor = "btn5-color";
     });
-    $(".btn6-color").on("click", function () {
+    colorBtn6.on("click", function () {
       currentColor = "btn6-color";
     });
-    $(".btn7-color").on("click", function () {
+    colorBtn7.on("click", function () {
       currentColor = "btn7-color";
     });
-    $(".btn8-color").on("click", function () {
+    colorBtn8.on("click", function () {
       currentColor = "btn8-color";
     });
 
+    // colorBtn1.on("click", setColor("btn1-color"));
+    // colorBtn2.on("click", setColor("btn2-color"));
+    // colorBtn3.on("click", setColor("btn3-color"));
+    // colorBtn4.on("click", setColor("btn4-color"));
+    // colorBtn5.on("click", setColor("btn5-color"));
+    // colorBtn6.on("click", setColor("btn6-color"));
+    // colorBtn7.on("click", setColor("btn7-color"));
+    // colorBtn8.on("click", setColor("btn8-color"));
+
     // PAINT SQUARE
+
     $(".square").bind({
       mousedown: function (event) {
         console.log("🐤 mousedown", currentColor);
+        // Prevents other listeners of the same event from being called
+        // Listeners called in the order in which they were added
+        event.stopImmediatePropagation();
         let selected = $(event.target);
-        if (event.which === 1 /* && !selected.hasClass(currentColor) */) {
+        if (
+          event.which === 1 &&
+          !selected.hasClass("active") &&
+          !selected.hasClass(currentColor)
+        ) {
+          IsClickDown = true;
+          selected.addClass("active");
+          selected.removeClass(colors).addClass(currentColor);
+        } else if (
+          event.which === 1 &&
+          selected.hasClass("active") &&
+          !selected.hasClass(currentColor)
+        ) {
           IsClickDown = true;
           selected.removeClass(colors);
+          selected.addClass("active");
           selected.addClass(currentColor);
+        } else if (
+          event.which === 1 &&
+          selected.hasClass("active") &&
+          selected.hasClass(currentColor)
+        ) {
+          selected.removeClass("active");
+          selected.removeClass(colors);
+        }
+      },
+
+      // Paint while holding down the button
+      mouseenter: function (event) {
+        if (event.which === 1 && IsClickDown) {
+          let selected = $(event.target);
+          if (!selected.hasClass(currentColor)) {
+            selected.addClass("active");
+            selected.removeClass(colors).addClass(currentColor);
+          }
         }
       },
       mouseup: function () {
         IsClickDown = false;
       },
-      // click: function (event) {
-      //   let selected = $(event.target);
-      //   console.log("🐤 click", currentColor);
-      //   if (event.which === 1) {
-      //     selected.removeClass(colors);
-      //     selected.addClass(currentColor);
-      //   }
-      // },
-      // Paint while holding down the button
-      mouseenter: function (event) {
-        console.log("🐤 mouseeenter", currentColor);
-        if (IsClickDown) {
-          let selected = $(event.target);
-          if (!$(event.target).hasClass(currentColor)) {
-            selected.removeClass(colors).toggleClass(currentColor);
-          }
-        }
-      },
     });
+
     // Disable right click
     return false;
   });
@@ -146,4 +182,23 @@ $(document).ready(function () {
       })
       .fadeIn();
   }
+  // function setColor(color) {
+  //   if (color === "btn1-color") {
+  //     currentColor = "btn1-color";
+  //   } else if (color === "btn2-color") {
+  //     currentColor = "btn2-color";
+  //   } else if (color === "btn3-color") {
+  //     currentColor = "btn3-color";
+  //   } else if (color === "btn4-color") {
+  //     currentColor = "btn4-color";
+  //   } else if (color === "btn5-color") {
+  //     currentColor = "btn5-color";
+  //   } else if (color === "btn6-color") {
+  //     currentColor = "btn6-color";
+  //   } else if (color === "btn7-color") {
+  //     currentColor = "btn7-color";
+  //   } else if (color === "btn8-color") {
+  //     currentColor = "btn8-color";
+  //   }
+  // }
 });
