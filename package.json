@@ -1,17 +1,21 @@
 {
-  "devDependencies": {
-    "parcel": "^2.0.0-rc.0",
-    "prettier": "2.4.1"
-  },
   "name": "paint-squares-app",
-  "description": "This is my version of an old style Tamagotchi game of our friend the fox! 🦊 [Please click here][link] to enjoy it!!",
+  "description": "",
   "version": "1.0.0",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel src/index.html",
+    "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Exequiel Sanoner",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "3.6.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0",
+    "prettier": "2.4.1"
+  }
 }
