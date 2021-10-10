@@ -19,7 +19,7 @@ $(document).ready(function () {
   })();
 
   const colors =
-    "btn1-color btn2-color btn3-color btn4-color btn5-color btn6-color btn7-color btn8-color";
+    "btn1-color btn2-color btn3-color btn4-color btn5-color btn6-color btn7-color btn8-color btn9-color btn10-color";
   const colorBtn1 = $(".btn1-color");
   const colorBtn2 = $(".btn2-color");
   const colorBtn3 = $(".btn3-color");
@@ -29,12 +29,48 @@ $(document).ready(function () {
   const colorBtn7 = $(".btn7-color");
   const colorBtn8 = $(".btn8-color");
 
+  let defaultColor = "btn8-color";
+
   let currentColor = null;
   let IsClickDown = false;
+
+  let initWithDefaultColor = true;
+
+  $(".square").bind({
+    mousedown: function (event) {
+      let selected = $(event.target);
+      IsClickDown = true;
+      if (event.which === 1 && initWithDefaultColor === true) {
+        if (!selected.hasClass(defaultColor)) {
+          selected.removeClass(colors).addClass(defaultColor);
+        } else if (selected.hasClass(defaultColor)) {
+          IsClickDown = true;
+          selected.removeClass(defaultColor);
+        }
+      }
+    },
+
+    // Paint while holding down the button
+    mouseenter: function (event) {
+      let selected = $(event.target);
+      if (
+        event.which === 1 &&
+        initWithDefaultColor === true &&
+        IsClickDown &&
+        !selected.hasClass(defaultColor)
+      ) {
+        selected.removeClass(colors).addClass(defaultColor);
+      }
+    },
+    mouseup: function () {
+      IsClickDown = false;
+    },
+  });
 
   // RIGHT-CLICK EVENTS
   $(document).contextmenu(function (event) {
     createColorSelector(event);
+    initWithDefaultColor = false;
 
     colorBtn1.on("click", function () {
       currentColor = "btn1-color";

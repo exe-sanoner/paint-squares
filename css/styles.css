@@ -3,12 +3,13 @@
   --colorSquare: white;
   --colorBackgrSelector: #ededc6f9;
   --colorBorderBtn: black;
-  --colorBtn5: #ff1493; /* DeepPink */
-  --colorBtn2: #ffa500; /* Orange */
-  --colorBtn4: #da70d6; /* Orchid */
   --colorBtn1: #ffd700; /* Gold */
+  --colorBtn2: #ffa500; /* Orange */
   --colorBtn3: #00ffff; /* Cyan */
-  --colorBtn6: #dc143c; /* Crimson */
+  --colorBtn4: peru; /* Peru */
+  --colorBtn5: #ff4500; /* Orange Red */
+  --colorBtn6: #ff1493; /* DeepPink */
+  --colorBtn7: #008000; /* Green */
   --colorBtn7: #0000ff; /* Blue */
   --colorBtn8: #000000; /* Black */
   --colorActive: red;
