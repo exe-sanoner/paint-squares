@@ -19,7 +19,7 @@ $(document).ready(function () {
   })();
 
   const colors =
-    "btn1-color btn2-color btn3-color btn4-color btn5-color btn6-color btn7-color btn8-color btn9-color btn10-color";
+    "btn1-color btn2-color btn3-color btn4-color btn5-color btn6-color btn7-color btn8-color";
   const colorBtn1 = $(".btn1-color");
   const colorBtn2 = $(".btn2-color");
   const colorBtn3 = $(".btn3-color");
@@ -29,7 +29,7 @@ $(document).ready(function () {
   const colorBtn7 = $(".btn7-color");
   const colorBtn8 = $(".btn8-color");
 
-  let defaultColor = "btn8-color";
+  const defaultColor = "btn8-color";
 
   let currentColor = null;
   let IsClickDown = false;
