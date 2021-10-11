@@ -5,3 +5,4 @@ public/
 .parcel-cache
 dist/
 .vscode/
+.vercel

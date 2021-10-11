@@ -127,7 +127,6 @@ $(function () {
     // Click position coordinates
     const mouseX = e.pageX;
     const mouseY = e.pageY;
-    // console.log("🐤", mouseX, mouseY);
     // Width and Height size of selector
     const menuWidth = $("div.color-selector").width();
     const menuHeight = $("div.color-selector").height();
