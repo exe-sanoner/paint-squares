@@ -1,15 +1,33 @@
-# Hello & Welcome! 👋
+# Print-Squares App
 
-This is my version of....
-[Please click here][link] to enjoy it!!
+Hello & Welcome! 👋
 
-# How to run it:
+Start making amazing drawings with this wonderful grid and its color palette.
 
-In the terminal:
+### Deployed version:
 
-- npm install
-- npm run start
+https://paint-squares.vercel.app/
+
+## Run the app locally
+
+Clone the repo
+
+```bash
+git clone https://github.com/exe-sanoner/paint-squares.git <local repo name>
+```
+
+Within the repo's directory, install dependencies
+
+```bash
+npm i
+```
+
+Then run the app in the development mode
+
+```bash
+npm start
+```
+
+Now open [http://localhost:1234](http://localhost:1234) to view it in the browser.
 
 Enjoy it! 🤗
-
-[link]: NOTHINGHEREYET!

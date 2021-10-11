@@ -40,8 +40,6 @@
 .color-selector {
   background: var(--colorBackgrSelector);
   display: none;
-  flex-direction: row;
-  justify-content: space-between;
   overflow: hidden;
   padding: 5px;
   position: absolute;
