@@ -5,12 +5,20 @@
   --colorBorderBtn: black;
   --colorBtn1: #ffd700; /* Gold */
   --colorBtn2: #ffa500; /* Orange */
-  --colorBtn3: #00ffff; /* Cyan */
-  --colorBtn4: peru; /* Peru */
-  --colorBtn5: #ff4500; /* Orange Red */
-  --colorBtn6: #008000; /* Green */
-  --colorBtn7: #0000ff; /* Blue */
-  --colorBtn8: #000000; /* Black */
+  --colorBtn3: #ec5615; /* Dark Orange */
+  --colorBtn4: #f80303; /* Red */
+  --colorBtn5: peru; /* Peru */
+  --colorBtn6: #7b3927; /* Brown */
+  --colorBtn7: #f7d0ed; /* Light Pink */
+  --colorBtn8: #f175df; /* Dark Pink */
+  --colorBtn9: #c0f341; /* Light Green */
+  --colorBtn10: #008000; /* Green */
+  --colorBtn11: #00ffff; /* Cyan */
+  --colorBtn12: #08c0ff; /* Sky Blue */
+  --colorBtn13: #0000ff; /* Blue */
+  --colorBtn14: #e2e2e2; /* Gray */
+  --colorBtn15: #767872; /* Dark gray */
+  --colorBtn16: #000000; /* Black */
   --colorActive: red;
   --colorShadow: rgba(49, 138, 172, 1);
 }
@@ -79,6 +87,30 @@ button {
 }
 .btn8-color {
   background-color: var(--colorBtn8);
+}
+.btn9-color {
+   background-color: var(--colorBtn9);
+ }
+.btn10-color {
+    background-color: var(--colorBtn10);
+}
+.btn11-color {
+     background-color: var(--colorBtn11);
+}
+.btn12-color {
+  background-color: var(--colorBtn12);
+}
+.btn13-color {
+  background-color: var(--colorBtn13);
+}
+.btn14-color {
+  background-color: var(--colorBtn14);
+}
+.btn15-color {
+  background-color: var(--colorBtn15);
+}
+.btn16-color {
+  background-color: var(--colorBtn16);
 }
 
 button:hover {
