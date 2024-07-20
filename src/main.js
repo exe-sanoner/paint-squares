@@ -144,7 +144,12 @@ $(function () {
 
   // Hide selector if move outside
   $("div.color-selector").mouseleave(function () {
-    $(this).fadeOut(500);
+    $(this).stop().fadeOut(700);
+  });
+
+  // Show selector if move inside
+  $("div.color-selector").mouseenter(function () {
+    $(this).stop().fadeIn();
   });
 
   // Hide selector if select button color
