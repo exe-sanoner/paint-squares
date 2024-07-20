@@ -12,11 +12,11 @@
   "author": "Exequiel Sanoner",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.6.0"
+    "jquery": "^3.7.1"
   },
   "devDependencies": {
-    "@parcel/transformer-image": "^2.0.0-rc.0",
-    "parcel": "^2.0.0-rc.0",
-    "prettier": "^2.4.1"
+    "@parcel/transformer-image": "^2.12.0",
+    "parcel": "^2.12.0",
+    "prettier": "3.3.3"
   }
 }

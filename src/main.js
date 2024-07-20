@@ -21,7 +21,7 @@ $(function () {
   })();
 
   const colors =
-    "btn1-color btn2-color btn3-color btn4-color btn5-color btn6-color btn7-color btn8-color";
+    "btn1-color btn2-color btn3-color btn4-color btn5-color btn6-color btn7-color btn8-color btn9-color btn10-color btn11-color btn12-color btn13-color btn14-color btn15-color btn16-color";
   const colorBtn1 = $(".btn1-color");
   const colorBtn2 = $(".btn2-color");
   const colorBtn3 = $(".btn3-color");
@@ -30,6 +30,14 @@ $(function () {
   const colorBtn6 = $(".btn6-color");
   const colorBtn7 = $(".btn7-color");
   const colorBtn8 = $(".btn8-color");
+  const colorBtn9 = $(".btn9-color");
+  const colorBtn10 = $(".btn10-color");
+  const colorBtn11 = $(".btn11-color");
+  const colorBtn12 = $(".btn12-color");
+  const colorBtn13 = $(".btn13-color");
+  const colorBtn14 = $(".btn14-color");
+  const colorBtn15 = $(".btn15-color");
+  const colorBtn16 = $(".btn16-color");
 
   let currentColor = "btn8-color";
   let isClickDown = false;
@@ -105,6 +113,30 @@ $(function () {
     colorBtn8.on("click", function () {
       currentColor = "btn8-color";
     });
+    colorBtn9.on("click", function () {
+      currentColor = "btn9-color";
+    });
+    colorBtn10.on("click", function () {
+      currentColor = "btn10-color";
+    });
+    colorBtn11.on("click", function () {
+      currentColor = "btn11-color";
+    });
+    colorBtn12.on("click", function () {
+      currentColor = "btn12-color";
+    });
+    colorBtn13.on("click", function () {
+      currentColor = "btn13-color";
+    });
+    colorBtn14.on("click", function () {
+      currentColor = "btn14-color";
+    });
+    colorBtn15.on("click", function () {
+      currentColor = "btn15-color";
+    });
+    colorBtn16.on("click", function () {
+      currentColor = "btn16-color";
+    });
 
     // Disable browser-specific context menu
     return false;
@@ -112,7 +144,12 @@ $(function () {
 
   // Hide selector if move outside
   $("div.color-selector").mouseleave(function () {
-    $(this).fadeOut(500);
+    $(this).stop().fadeOut(700);
+  });
+
+  // Show selector if move inside
+  $("div.color-selector").mouseenter(function () {
+    $(this).stop().fadeIn();
   });
 
   // Hide selector if select button color
